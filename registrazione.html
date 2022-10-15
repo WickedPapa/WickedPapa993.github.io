@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<title>Registrazione</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body class="background">
+		<div>
+			<header>
+				<nav>
+					<a href="index.html">Home</a>
+					<details>
+						<summary><a href="order_of_fenix.html">Ordine della Fenice</a></summary>
+							<ul>
+								<li><a href="order_of_fenix.html#silente">Silente</a></li>
+								<li><a href="order_of_fenix.html#trio">Trio d'oro</a></li>
+								<li><a href="order_of_fenix.html#altri">Ordine al completo</a></li>
+							</ul>
+					</details>
+					<details>
+						<summary><a href="deatheathers.html">Voldemort e seguaci</summary>
+							<ul>
+								<li><a href="deatheathers.html#voldemort">Voldemort</a></li>
+								<li><a href="deatheathers.html#mangiamorte">Mangiamorte</a></li>
+							</ul>
+					</details>
+					<a href="contatti.html">Contatti<br/></a>
+					<a href="login.html">Login<br/></a>
+					<a href="#">Registrati</a>
+				</nav>
+				<div style="text-align: center; padding-top: 20px;">
+					<audio controls loop >
+						<source src="audio/slow-calm-dark-dark-ambient-halloween-walth-horror-and-creepy-116010.mp3" type="audio/mpeg" />
+						Il tuo browser non supporta l'audio
+					</audio>
+				</div>
+			</header>
+			<main>
+				<hr/><hr/><hr/>
+				<form action="file.php" method="post">
+					<fieldset>
+						<legend>Dati Anagrafici</legend>
+						<div>
+							<label for="foto">Clicca per inserire un immagine del profilo <br/></label>
+							<input type="file" name="photo" id="foto" style="display: none" />
+						</div>
+						<div>
+							<label for="nome"><br/>Nome:<br/></label>
+							<input type="text" name="Fname" id="nome" maxlength="20" required />
+						</div>
+						<div>
+							<label for="cognome"><br/>Cognome:<br/></label>
+							<input type="text" name="Lname" id="Cognome" maxlength="20" required />
+						</div>
+						<div>
+							<label for="birthday"><br/>Data di nascita:<br/></label>
+							<input type="date" name="Bday" id="birthday" maxlength="20" required />
+						</div>
+						<div>
+							<label for="cfiscale"><br/>Codice Fiscale:<br/></label>
+							<input type="text" name="CF" id="cfiscale" pattern="[a-z, A-Z, 0-9]{16}" required />
+						</div>
+						<div>
+							<label for="job"><br/>Lavoratore</label>
+							<input type="radio" name="lavoratore" id="job" />
+							<label for="job">Studente:</label>
+							<input type="radio" name="studente" id="job" />
+						</div>
+						<div>
+							<label for="indirizzo"><br/>Indirizzo di Residenza:<br/></label>
+							<input type="text" name="address" id="indirizzo" required />
+							<label for="civico">n°</label>
+							<input type="number" name="Ncivico" id="civico" min="1" max="9999" required />
+						</div>
+						<div>
+							<label for="cap"><br/>CAP:<br/></label>
+							<input type="text" name="CAP" id="cap" pattern="[0-9]{5}" required />
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>Dati Magici</legend>
+						<div>
+							<label for="legnobacchetta">Legno della Bacchetta:<br/></label>
+							<input list="listalegno" name="wood" id="legnobacchetta" required />
+							<datalist id="listalegno">
+								<option />
+								<option value="Abete" />
+								<option value="Acero" />
+								<option value="Pino" />
+								<option value="Quercia" />
+							</datalist>
+						</div>
+						<div>
+							<label for="nucleobacchetta"><br/>Nucleo della Bacchetta:<br/></label>
+							<input list="listanucleo" name="nucleo" id="nucleobacchetta" required />
+							<datalist id="listanucleo">
+								<option />
+								<option value="Corda di cuore di drago" />
+								<option value="Crine di unicorno" />
+								<option value="Piuma di fenice" />
+							</datalist>
+						</div>
+						<div>
+							<label for="pollicibacchetta"><br/>Lunghezza della Bacchetta:<br/></label>
+							<select name="pollici" id="pollicibacchetta" required>
+								<option></option>
+								<option value="10">11</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+							</select>
+						</div>
+						<div>
+							<label for="animale"><br/>Animale da compagnia:<br/></label>
+							<select name="animal" id="animale" required>
+								<option></option>
+								<option value="cat">Gatto</option>
+								<option value="frog">Rana</option>
+								<option value="mouse">Topo</option>
+							</select>
+						</div>
+						<div>
+							<label for="patron"><br/>Patronus:<br/></label>
+							<input type="text" name="patronus" id="patron" maxlength="20" required />
+						</div>
+						<div>
+							<label for="casa"><br/>Casa di Hogwarts:<br/></label>
+							<select name="hogwarts_house" id="casa" required>
+								<option></option>
+								<option value="corvonero">Corvonero</option>
+								<option value="Grifondoro">Grifondoro</option>
+								<option value="Serpeverde">Serpeverde</option>
+								<option value="Tassorosso">Tassorosso</option>
+							</select>
+						</div>
+						<div>
+							<label for="scopa"><br/>Scopa volante:<br/></label>
+							<input type="text" name="scopa" id="scopa" maxlength="20" />
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>Dati di Accesso</legend>
+						<div>
+							<label for="user">Username:<br/></label>
+							<input type="text" name="username" id="user" maxleght="20" required />
+						</div>
+						<div>
+							<label for="mail"><br/>Indirizzo Mail:<br/></label>
+							<input type="email" name="email" id="mail" required />
+						</div>
+						<div>
+							<label for="psw"><br/>Password:<br/></label>
+							<input type="password" name="password" id="psw" required />
+						</div>
+						<div>
+							<label for="prefisso"><br/>Numero di telefono:<br/></label>
+							<select name="prefisso" id="prefisso" required>
+								<option value="us" >USA +1</option>
+								<option value="fr" >FRANCIA +33</option>
+								<option value="en" >REGNO UNITO +44</option>
+								<option value="it" selected>ITALIA +39</option>
+								<option value="sp" >SPAGNA +34</option>
+							</select>
+							<label for="phone_number">-</label>
+							<input type="tel" name="phone" id="phone_number" pattern="[0-9]{9,11}" required />
+						</div>
+						<div>
+							<label for="ci"></br>Clicca per inserire un documento</label>
+							<input type="file" name="document" id="ci" style="display: none" />
+						</div>
+					</fieldset>
+					<div style="text-align: center">
+						<input type="submit" value="INVIA" />
+						<input type="reset" value="REIMPOSTA" />
+					</div>
+				</form>
+			</main>
+			<footer>
+				<hr/>
+				<h2>Link utili:</h2>
+				<figure>
+					<a
+						target="_blank"
+						href="https://www.wizardingworld.com/">
+						<img 
+							title="Wizarding World"
+							alt="immagine non trovata"
+							height="50"
+							src="immagini/WW_Hero_Image.jpg" />
+					<a/>
+					<figcaption>Wizarding World</figcaption>
+				</figure>
+				<figure>
+					<a
+						target="_blank"
+						href="https://www.wizardingworld.com/">
+						<img 
+							title="Harry Potter Wiki"
+							alt="immagine non trovata"
+							height="50"
+							src="immagini/Site-logo.webp" />
+					<a/>
+					<figcaption>Harry Potter Wiki</figcaption>
+				</figure>
+				<address>Hogwarts, England</address>
+			</footer>
+		</div>
+	</body>
+</html>

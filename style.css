@@ -1,0 +1,57 @@
+/*.background {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(immagini/sfondo-verde-chiaro-sito-web-parete-o-illustrazione-di-carta-disegno-colori-pastello-166508910.jpg) no-repeat center top;
+  position: fixed; 
+  z-index: -1;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow-y:scroll;
+  overflow-x:hidden;
+} utilizzato solo nel caso in cui lo sfondo sia una immagine con un disegno che se ripetuto si nota la ripetizione*/ 
+
+/*
+*, html{
+	margin: 0;
+	padding:0;
+}
+selettore di tutti i tag più tag html. in questo caso dovrò modificare i margin e i padding di tutti i tag manualmente. con *:not(ul) ad esempio
+seleziono tutti i tag tranne il tag ul*/
+
+.background {
+	background: url(immagini/sfondo-verde-chiaro-sito-web-parete-o-illustrazione-di-carta-disegno-colori-pastello-166508910.jpg);
+}
+
+nav{
+	background: #79d2e2;
+	display: flex;
+	justify-content: space-around;
+	font-size: 20px;
+	position: fixed; /*position: sticky; non conviene utilizzarlo*/
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding-bottom: 10px;
+	z-index: 9; /*altrimenti il tag audio copre il menu a tendina*/
+}
+
+audio{
+	padding-top: 20px;
+}
+
+li{
+	color: red;
+}
+/*
+header{
+	position: fixed;
+	top: 0;
+	width: 0;
+}
+
+avrei potuto mettere il position fixed nell'header ma avrebbe bloccato anche il contenuto dell'header
+*/
